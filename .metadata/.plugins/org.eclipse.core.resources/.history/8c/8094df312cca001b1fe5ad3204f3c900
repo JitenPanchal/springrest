@@ -1,0 +1,26 @@
+package com.springrest.validators;
+
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+
+public class IdValidator implements ConstraintValidator<Id, Long> {
+
+	@Override
+	public boolean isValid(Long value, ConstraintValidatorContext context) {
+
+		if (value == null)
+			return true;
+
+		if (value != null && ((value < 1) || (value > Long.MAX_VALUE))) {
+			return true;
+		}
+
+		if (value.length() > 10 || value.length() < 2) {
+			return false;
+		}
+
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+}

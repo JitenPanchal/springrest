@@ -1,6 +1,3 @@
 package com.springrest.controllers;
 
-
-abstract class BaseApiController {
-
-}
+abstract class BaseApiController {}

@@ -1,0 +1,7 @@
+package com.springrest.service.contracts;
+
+public interface IMapper<TEntity, TDto> {
+
+	TDto convertEntityToDto(TEntity entity);
+	TEntity convertDtoToEntity(TDto entity);
+}

@@ -1,0 +1,6 @@
+package com.springrest.service.contracts;
+
+@FunctionalInterface
+public interface IEntityToDtoMapper<TEntity, TDto> {
+	TDto convertEntityToDto(TEntityentity);
+}

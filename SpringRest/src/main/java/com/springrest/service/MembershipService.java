@@ -31,7 +31,7 @@ public class MembershipService implements IMembershipService {
 	@Override
 	public void deleteById(Long id) {
 		this.userRepository.deleteById(id);
-		
+
 	}
 
 }

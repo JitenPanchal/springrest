@@ -1,0 +1,5 @@
+package com.springrest.service.contracts;
+
+public interface IMapper<From, To> {
+	To map(From entity);
+}

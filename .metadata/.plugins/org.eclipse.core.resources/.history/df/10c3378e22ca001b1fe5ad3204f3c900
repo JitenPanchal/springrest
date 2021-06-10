@@ -1,0 +1,26 @@
+package com.springrest.dtos;
+
+import com.springrest.entities.membership.User;
+import com.springrest.service.contracts.IMapper;
+
+public class UserMapper implements IMapper<User, UserDto> {
+
+	@Override
+	public UserDto convertEntityToDto(User entity) {
+
+		var dto = new UserDto();
+		
+		dto.setId(entity.getId());
+		dto.setName(entity.getName());
+		dto.setEmail(entity.getEmail());
+		
+		return null;
+	}
+
+	@Override
+	public User convertDtoToEntity(UserDto entity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
