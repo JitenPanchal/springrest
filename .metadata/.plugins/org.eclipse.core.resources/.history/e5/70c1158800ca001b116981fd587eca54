@@ -1,0 +1,5 @@
+package com.springrest.exceptions;
+
+public class EntityNotFoundException {
+
+}

@@ -1,0 +1,9 @@
+package com.springrest.service;
+
+import com.springrest.service.contracts.IMembershipService;
+
+public class MembershipService implements IMembershipService {
+
+	private IUserRepository userRepository;
+	
+}

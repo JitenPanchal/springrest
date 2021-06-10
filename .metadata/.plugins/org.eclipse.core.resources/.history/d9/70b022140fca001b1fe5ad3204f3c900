@@ -1,0 +1,16 @@
+package com.springrest;
+
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+public class ExceptionHandlers {
+
+	@ExceptionHandler(EntityNotFoundException.class)
+	public ResponseEntity<?> handlEntityNotFoundException(EntityNotFoundException exception, WebRequest request) {
+
+		ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(), exception.getMessage(),
+				request.getDescription(false));
+
+		return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
+	}
+	
+}

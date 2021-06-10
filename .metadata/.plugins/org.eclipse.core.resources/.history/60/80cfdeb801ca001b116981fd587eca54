@@ -1,0 +1,24 @@
+package com.springrest;
+
+import org.springframework.http.MediaType;
+import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import com.springrest.service.contracts.IMembershipService;
+
+public class Configuration implements WebMvcConfigurer {
+	
+	@Override
+	public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
+		WebMvcConfigurer.super.configureContentNegotiation(configurer);
+		configurer.favorParameter(true).parameterName("format").defaultContentType(MediaType.APPLICATION_JSON)
+				.mediaType("xml", MediaType.APPLICATION_XML).mediaType("json", MediaType.APPLICATION_JSON);
+
+	}
+	
+	
+	@Bean
+	public IMembershipService membershipService() {
+		
+	}
+}

@@ -1,0 +1,20 @@
+package com.springrest.service.contracts;
+
+import java.util.Optional;
+
+import com.springrest.entities.membership.User;
+
+public interface IMembershipService {
+	
+	Optional<User> findUserById(Long id);
+	
+	User save(User entity);
+	
+	/**
+	 * Deletes the entity with the given id.
+	 *
+	 * @param id must not be {@literal null}.
+	 * @throws IllegalArgumentException in case the given {@literal id} is {@literal null}
+	 */
+	void deleteById(ID id);
+}

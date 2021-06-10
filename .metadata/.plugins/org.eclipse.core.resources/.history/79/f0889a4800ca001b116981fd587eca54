@@ -1,0 +1,30 @@
+package com.springrest.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+import java.util.Optional;
+
+import com.springrest.service.contracts.IMembershipService;
+
+@RestController("/user")
+public class UserController extends BaseApiController {
+
+	private IMembershipService membershipService;
+
+	@Autowired
+	public UserController(IMembershipService membershipService) {
+		super();
+		this.membershipService = membershipService;
+	}
+
+	public ResponseEntity<User> findUserById(long id) {
+		
+		Optional<User> user = this.membershipService.findUserById(id);
+		
+		
+		return new ResponseEntity<User>(HttpStatus.OK,this.membershipService.findUserById(id));
+	}
+
+}

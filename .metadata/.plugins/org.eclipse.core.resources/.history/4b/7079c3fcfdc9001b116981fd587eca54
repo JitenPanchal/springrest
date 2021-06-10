@@ -1,0 +1,5 @@
+package com.springrest.service;
+
+public class MembershipService implements IMembershipService {
+
+}

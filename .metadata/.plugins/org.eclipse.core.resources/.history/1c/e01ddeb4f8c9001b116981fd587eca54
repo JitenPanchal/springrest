@@ -1,0 +1,5 @@
+package com.springrest.entities.membership;
+
+public class User {
+
+}

@@ -1,0 +1,18 @@
+package com.springrest.service;
+
+import com.springrest.repositories.IUserRepository;
+import com.springrest.service.contracts.IMembershipService;
+
+public class MembershipService implements IMembershipService {
+
+	private IUserRepository userRepository;
+
+	
+	public MembershipService(IUserRepository userRepository) {
+		super();
+		this.userRepository = userRepository;
+	}
+	
+	
+	
+}
