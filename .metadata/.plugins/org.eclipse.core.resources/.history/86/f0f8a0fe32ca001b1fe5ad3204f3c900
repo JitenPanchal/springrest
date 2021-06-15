@@ -17,4 +17,5 @@ public class SpringRestApplication extends SpringBootServletInitializer {
 		return application.sources(SpringRestApplication.class);
 	}
 
+
 }
